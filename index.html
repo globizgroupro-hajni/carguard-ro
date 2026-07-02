@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CARGUARD® — Accesorii auto B2B | Devino partener</title>
+<meta name="description" content="Accesorii auto care aduc profit. Devino partener B2B CARGUARD®: produse de calitate, prețuri mici, stoc, garanție, livrare rapidă.">
+<style>
+:root{--red:#e1121d;--red2:#ff2b2b;--bg:#0b0b0d;--bg2:#141417;--line:#26262b;--tx:#f3f3f5;--mut:#a7a7ad}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.55}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
+.btn:hover{background:#ff1f2b;transform:translateY(-2px)}
+header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
+header img{height:30px}
+header .btn{margin-left:auto;padding:11px 20px;font-size:14px}
+.hero{padding:60px 0 52px;background:radial-gradient(900px 500px at 70% -10%,rgba(225,18,29,.25),transparent 60%),linear-gradient(180deg,#141417,#0b0b0d)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.kick{color:var(--red2);font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px;margin-bottom:14px}
+.hero h1{font-size:42px;line-height:1.1;font-weight:900;margin-bottom:16px}
+.hero p.lead{font-size:19px;color:var(--mut);margin-bottom:26px}
+.portrait{border-radius:18px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.55);position:relative}
+.portrait img{width:100%;height:500px;object-fit:cover;object-position:50% 18%}
+.portrait .tag{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.8));padding:24px 18px 14px;font-weight:800}
+.portrait .tag small{display:block;color:var(--red2);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:1px}
+section{padding:54px 0;border-top:1px solid var(--line)}
+h2{font-size:30px;font-weight:900;margin-bottom:10px}
+h2 .r{color:var(--red2)}
+.sub{color:var(--mut);font-size:17px;margin-bottom:28px;max-width:780px}
+.pain{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:26px 28px;font-size:17px;color:#dcdce0}
+.pain b{color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+.chip{background:#1c1c20;border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-weight:700;font-size:14px}
+.chip::before{content:"\2713 ";color:var(--red2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.prods{grid-template-columns:repeat(3,1fr)}
+.prods figure{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:center}
+.prods img{width:100%;height:340px;object-fit:contain;border-radius:8px;background:#0a0a0c}
+.prods figcaption{margin-top:10px;font-weight:700;font-size:13px;color:#e9e9ec}
+.range{margin:18px auto 0;max-width:560px;border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px;position:relative}
+.card .n{position:absolute;top:-14px;left:18px;background:var(--red);width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-weight:900}
+.card h3{font-size:19px;margin:10px 0 8px}
+.card .ex{color:var(--red2);font-weight:700;font-size:13px;margin-bottom:8px}
+.card p{color:var(--mut);font-size:14.5px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:24px 14px}
+.stat .v{font-size:30px;font-weight:900;color:var(--red2)}
+.stat .l{color:var(--mut);font-size:14px;margin-top:6px}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+.fact{display:flex;gap:12px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.fact .i{color:var(--red2);font-weight:900;font-size:18px}
+.partners-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:8px}
+.pcard{background:#fff;border-radius:12px;padding:16px 8px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:70px}
+.pcard span{color:#15151a;font-weight:800;font-size:13.5px}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:22px}
+.rev .stars{color:#ffc107;margin-bottom:10px;letter-spacing:2px}
+.rev p{font-size:14.5px;color:#dcdce0}
+.rev .who{margin-top:14px;font-weight:800;color:#fff;font-size:14px}
+.faq details{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:6px 18px;margin-bottom:12px}
+.faq summary{cursor:pointer;font-weight:800;padding:14px 0;list-style:none;font-size:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+ ";color:var(--red2);font-weight:900}
+.faq details[open] summary::before{content:"\2013 "}
+.faq p{color:var(--mut);padding:0 0 16px;font-size:15px}
+.cta{background:radial-gradient(700px 360px at 50% 0,rgba(225,18,29,.3),transparent 60%),var(--bg2);border-radius:20px;border:1px solid var(--line);padding:44px 24px;margin:10px 0}
+.giftwrap{display:flex;gap:28px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.giftimg{width:210px;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.cta h2{font-size:32px}
+.gift{display:inline-block;margin:14px 0 20px;background:#1c1c20;border:1px dashed var(--red);border-radius:999px;padding:10px 20px;font-weight:700}
+footer{padding:34px 0;color:var(--mut);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+footer b{color:#fff}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr}.prods{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}.facts{grid-template-columns:1fr}.reviews{grid-template-columns:1fr}.partners-grid{grid-template-columns:repeat(3,1fr)}}
+.reassure{font-size:13px;color:var(--mut);margin-top:10px;text-align:center}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:99;background:rgba(11,11,13,.96);border-top:1px solid var(--line);padding:10px 14px;display:none;backdrop-filter:blur(6px)}
+.sticky-cta a{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:10px;font-size:16px;text-align:center}
+.sticky-cta small{display:block;color:var(--mut);font-size:12px;margin-top:6px;text-align:center}
+@media(max-width:760px){.sticky-cta{display:block}body{padding-bottom:88px}}
+#leadform input{width:100%;background:#0f0f12;border:1px solid var(--line);border-radius:10px;padding:13px 15px;color:var(--tx);font-size:15px;margin-bottom:10px;font-family:inherit}
+#leadform input:focus{outline:none;border-color:var(--red2)}
+#leadform .frow{display:flex;gap:10px}
+#leadform .frow input{flex:1}
+@media(max-width:560px){#leadform .frow{display:block}}
+</style>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+fbq("init","1344314721133063");fbq("track","PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1344314721133063&ev=PageView&noscript=1"/></noscript>
+</head>
+<body>
+<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"><a class="btn" href="#inscriere">Prețuri en-gros &rarr;</a></div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <div class="kick">partenerul tău B2B preferat</div>
+    <h1>Accesorii auto care aduc <span style="color:var(--red2)">profit</span> &mdash; nu praf pe raft.</h1>
+    <p class="lead">Ai magazin sau service auto ori firmă de distribuție și vrei marfă care <b>se mișcă</b>? Devino partener CARGUARD®.</p>
+    <a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a><div class="reassure">&#10003; Înregistrare gratuită &middot; 2 minute &middot; Acces la prețurile en-gros</div>
+  </div>
+  <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - partenerul tău"><div class="tag"><small>CARGUARD® &middot; Globiz Group</small>Partenerul tău pentru accesorii auto de calitate</div></div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section><div class="wrap">
+  <h2>Știm <span class="r">cum e&hellip;</span></h2>
+  <div class="pain">
+    Intră unul și zice: <b>&laquo;Mai ieftin, șefu'&hellip; am găsit online.&raquo;</b> Vine altul cu produsul în mână: <b>&laquo;Schimbă-l în garanție, acum.&raquo;</b><br><br>
+    Și apoi vin și restul: controale, hârtii, certificate, traduceri, avize&hellip; și trebuie să fii în regulă cu toate &mdash; fără să închizi magazinul.<br><br>
+    Iar la sfârșitul lunii: taxe, salarii, chirii, facturi. Muncești de dimineața până seara și uneori rămâi fără lichidități exact când ai cea mai mare nevoie.
+  </div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <h2>De aceea există <span class="r">CARGUARD®</span></h2>
+  <p class="sub">Ca să ai un partener în care poți avea încredere chiar și în vremuri de criză:</p>
+  <div class="chips"><span class="chip">produse excelente</span><span class="chip">prețuri mici</span><span class="chip">stoc</span><span class="chip">suport</span></div>
+  <p class="sub" style="margin:6px 0 12px">+ ambalaj de calitate și design unic, atractiv</p>
+  <div class="chips"><span class="chip">certificate</span><span class="chip">traduceri</span><span class="chip">avize</span><span class="chip">garanții</span></div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section><div class="wrap">
+  <h2><span class="r">Produsele</span> noastre</h2>
+  <p class="sub">Accesorii populare cu rulaj rapid &mdash; becuri LED &amp; halogen, huse, ștergătoare și multe altele.</p>
+  <div class="grid prods"><figure><img src="assets/prod/h7price.jpg" alt="Bec H7"><figcaption>Bec H7 halogen</figcaption></figure>
+    <figure><img src="assets/prod/h7led.jpg" alt="Becuri LED H7"><figcaption>Becuri LED H7</figcaption></figure>
+    <figure><img src="assets/prod/h4led.jpg" alt="Becuri LED H4"><figcaption>Becuri LED H4</figcaption></figure>
+    <figure><img src="assets/prod/h1led.jpg" alt="Becuri LED H1"><figcaption>Becuri LED H1</figcaption></figure>
+    <figure><img src="assets/prod/halh7.jpg" alt="Becuri halogen H7"><figcaption>Halogen H7</figcaption></figure>
+    <figure><img src="assets/prod/halh4.jpg" alt="Becuri halogen H4"><figcaption>Halogen H4</figcaption></figure>
+  </div>
+  <div class="range"><img src="assets/range.jpg" alt="Gama completă de accesorii CARGUARD®"></div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <h2>BENEFICII <span class="r">pentru magazinul tău</span></h2>
+  <p class="sub">De ce colaborarea cu CARGUARD® crește vânzările și marja ta.</p>
+  <div class="grid">
+    <div class="card"><div class="n">1</div><h3>Produse universale</h3><div class="ex">ex: huse universale de scaune</div><p>Vinzi același produs către mult mai mulți clienți. Rulaj rapid, prețuri accesibile.</p></div>
+    <div class="card"><div class="n">2</div><h3>Ambalaj premium</h3><div class="ex">ex: becuri auto</div><p>Produsele ies în evidență pe raft și inspiră încredere. Mai multe achiziții spontane.</p></div>
+    <div class="card"><div class="n">3</div><h3>Preț competitiv</h3><div class="ex">ex: becuri H7, borne de baterie</div><p>Marje bune chiar și la cantități mici. Preț mic &amp; cerere mare.</p></div>
+    <div class="card"><div class="n">4</div><h3>Rulaj rapid</h3><div class="ex">ex: ștergătoare</div><p>Cerere constantă tot anul. Cashflow sănătos, fără bani blocați.</p></div>
+    <div class="card"><div class="n">5</div><h3>Calitate verificată</h3><div class="ex">standarde europene</div><p>Mai puține retururi și reclamații. Costuri mai mici, clienți fideli.</p></div>
+    <div class="card"><div class="n">6</div><h3>Gamă diversificată</h3><div class="ex">multe categorii</div><p>Umpli ușor rafturile. Risc comercial mai mic, vânzări mai stabile.</p></div>
+  </div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section><div class="wrap">
+  <h2>Nu-ți cerem să ne crezi <span class="r">pe cuvânt.</span> Îți arătăm cifrele.</h2>
+  <div class="stats" style="margin-top:22px">
+    <div class="stat"><div class="v">2007</div><div class="l">platformă B2B activă din</div></div>
+    <div class="stat"><div class="v">1000+</div><div class="l">produse în portofoliu</div></div>
+    <div class="stat"><div class="v">3000</div><div class="l">parteneri activi</div></div>
+    <div class="stat"><div class="v">2&ndash;3</div><div class="l">zile &mdash; livrare în toată țara</div></div>
+  </div>
+  <div class="facts">
+    <div class="fact"><span class="i">&#10003;</span><div>Garanție <b>2&ndash;3 ani</b> (la alarme: pe viață)</div></div>
+    <div class="fact"><span class="i">&#10003;</span><div>Certificate de <b>conformitate europeană</b> &mdash; siguranță &amp; legalitate pe raft</div></div>
+    <div class="fact"><span class="i">&#10003;</span><div>Distribuție națională &amp; logistică de încredere</div></div>
+    <div class="fact"><span class="i">&#10003;</span><div>Consultant de vânzări dedicat pentru fiecare partener</div></div>
+  </div>
+  <p class="sub" style="margin:28px 0 6px"><b style="color:#fff">Distribuție națională &amp; colaborări cu:</b></p>
+  <div class="partners-grid">
+    <div class="pcard"><span>Carrefour</span></div>
+    <div class="pcard"><span>Auchan</span></div>
+    <div class="pcard"><span>Dedeman</span></div>
+    <div class="pcard"><span>eMAG</span></div>
+    <div class="pcard"><span>Autonet</span></div>
+    <div class="pcard"><span>Autototal</span></div>
+    <div class="pcard"><span>Materom</span></div>
+  </div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <h2>Recenzii <span class="r">de pe Google</span></h2>
+  <div class="reviews">
+    <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Multe accesorii, prețuri rezonabile și livrare exactă, corectă. Comunicare excelentă din partea consultantului. Produsele sunt de calitate.</p><div class="who">Adi Expert Auto</div></div>
+    <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Sunt unici, comercializează doar produse de calitate, personal 100% dedicat, garanție reală la tot. Colaborăm de peste 10 ani &mdash; îi recomand.</p><div class="who">Vasilescu Stelian</div></div>
+    <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>Foarte mulțumită de produsele Globiz. Au cele mai bune prețuri și o gamă mare. Consultantul mă susține cu respect. O recomand!</p><div class="who">Maria Toșe</div></div>
+  </div>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section><div class="wrap faq">
+  <h2>Întrebări <span class="r">frecvente</span></h2>
+  <details><summary>&laquo;Nu vreau să-mi rămână marfă pe raft.&raquo;</summary><p>Ai acces la produse cu cerere constantă și recomandări de la consultant, ca să comanzi inteligent.</p></details>
+  <details><summary>&laquo;Mă interesează livrarea. O vreau rapid.&raquo;</summary><p>Comenzile ajung în 2&ndash;3 zile, în toată țara.</p></details>
+  <details><summary>&laquo;Și dacă se strică?&raquo;</summary><p>Garanție 2&ndash;3 ani, cu procedură de reparație/înlocuire în garanție.</p></details>
+  <details><summary>&laquo;Sunt bune prețurile?&raquo;</summary><p>Prețuri competitive, diferențiate pe cantitate și cu stabilitate de 2&ndash;3 luni.</p></details>
+  <details><summary>&laquo;Sunt client nou. Cum plătesc?&raquo;</summary><p>Termeni clari la început, apoi limite de credit în funcție de volum (30/45/60 zile).</p></details>
+  <details><summary>&laquo;Nu am timp să alerg după furnizori.&raquo;</summary><p>Consultant dedicat, răspuns rapid și platformă B2B &mdash; comanzi mai repede.</p></details>
+</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+
+<section><div class="wrap">
+  <div class="cta" id="inscriere">
+    <div class="giftwrap">
+      <img class="giftimg" src="assets/gift.jpg" alt="Cadou CARGUARD®">
+      <div>
+        <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2>Devino <span class="r">partenerul</span> nostru</h2>
+        <p class="sub" style="margin:8px 0 0">Înregistrează-te gratuit pe platforma noastră B2B și primești acces la prețurile en-gros și la toată gama de produse.</p>
+        <div class="gift">&#127873; Cadou surpriză la prima comandă &mdash; indiferent de sumă!</div><br>
+        <form id="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:460px;margin-left:auto;margin-right:auto">
+  <div class="frow"><input name="Nume" placeholder="Nume *" required><input name="Firma" placeholder="Firmă *" required></div>
+  <div class="frow"><input name="Telefon" type="tel" placeholder="Telefon *" required><input name="Oras" placeholder="Oraș"></div>
+  <input name="Email" type="email" placeholder="Email *" required>
+  <input type="hidden" name="_subject" value="Lead B2B Romania (landing)">
+  <label style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--mut);margin:2px 0 14px;text-align:left;line-height:1.45">
+    <input type="checkbox" name="Acord_GDPR" value="Da" required style="width:auto;margin-top:3px;flex:0 0 auto">
+    <span>Sunt de acord ca CARGUARD® să mă contacteze (telefon, email sau WhatsApp) privind colaborarea en-gros B2B. Datele mele sunt folosite doar în acest scop și îmi pot retrage consimțământul oricând. Vezi <a href="https://globiz.ro/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Politica de confidențialitate</a> și <a href="https://globiz.ro/termeni_si_conditii" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Termeni și condiții</a>.</span>
+  </label>
+  <button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Trimite datele tale &rarr;</button>
+  <div class="reassure">&#10003; Gratuit &middot; 2 minute &middot; Te contactăm ca să finalizezi înregistrarea</div>
+</form>
+<div id="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">&#9989;</div><h3 style="font-size:22px;margin:8px 0">Mulțumim!</h3><p class="sub">Am primit datele tale. Te contactăm în curând.</p></div>
+<div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
+  <p class="sub" style="font-size:14px;margin:0 0 12px">Știi deja că vrei să devii partener?</p>
+  <a href="https://globiz.ro/utilizator/inregistrare?ref=landing_ro" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Înregistrează-te direct pe platformă &rarr;</a>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><b>CARGUARD®</b> &middot; Globiz Group &middot; carguard.shop &middot; globiz.ro<br>Accesorii auto en-gros (B2B) &mdash; calitate, garanție, direct de la producător.</div></footer>
+<script>(function(){var lf=document.getElementById("leadform");if(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){lf.style.display="none";document.getElementById("leadok").style.display="block";if(window.fbq)fbq("track","Lead");}else{alert("Eroare. Încercați din nou sau sunați-ne.");}}).catch(function(){alert("Eroare de rețea. Încercați din nou.");});});}var reg=document.querySelectorAll('a[href*="globiz.ro/utilizator/inregistrare"]');for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}})();</script>
+<div class="sticky-cta"><a class="btn" href="#inscriere">Înregistrează-te &mdash; prețuri en-gros &rarr;</a><small>Gratuit &middot; 2 minute &middot; Acces la prețurile en-gros</small></div></body>
+</html>
