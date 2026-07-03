@@ -14,6 +14,7 @@ img{max-width:100%;display:block}
 .btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px 30px;border-radius:12px;font-size:17px;box-shadow:0 8px 24px rgba(225,18,29,.35);transition:.15s}
 .btn:hover{background:#ff1f2b;transform:translateY(-2px)}
 header{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+#inscriere{scroll-margin-top:90px}
 header .wrap{display:flex;align-items:center;gap:16px;padding:12px 20px}
 header img{height:30px}
 header .btn{margin-left:auto;padding:11px 20px;font-size:14px}
@@ -100,10 +101,10 @@ fbq("init","1344314721133063");fbq("track","PageView");
     <div class="kick">partenerul tău B2B</div>
     <h1>Accesorii auto care aduc <span style="color:var(--red2)">profit</span> &mdash; nu praf pe raft.</h1>
     <p class="lead">Ai magazin sau service auto ori firmă de distribuție și vrei marfă care <b>se mișcă</b>? Devino partener CARGUARD®.</p>
-    <a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a><div class="reassure">&#10003; Înregistrare gratuită &middot; 2 minute &middot; Acces la prețurile en-gros</div>
+    <span id="inscriere"></span><form id="leadform" class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:14px;text-align:left;max-width:440px"><div class="frow"><input name="Nume" placeholder="Nume *" required><input name="Firma" placeholder="Firmă *" required></div><input name="Telefon" type="tel" placeholder="Telefon *" required style="margin-top:8px"><input type="hidden" name="_subject" value="Lead B2B Romania (landing)"><label style="display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--mut);margin:8px 0 12px;line-height:1.4"><input type="checkbox" name="Acord_GDPR" value="Da" required style="width:auto;margin-top:3px;flex:0 0 auto"><span>Sunt de acord ca CARGUARD® să mă contacteze (telefon, email, WhatsApp) privind colaborarea B2B. <a href="https://globiz.ro/gdpr" target="_blank" rel="noopener" style="color:var(--red2);text-decoration:underline">Confidențialitate</a></span></label><button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:16px">Trimite datele tale &rarr;</button><div class="reassure">&#10003; Gratuit &middot; 2 minute &middot; Te sunăm în 24h</div></form><div id="leadok" class="leadok" style="display:none;padding:14px 0"><div style="font-size:38px">&#9989;</div><h3 style="font-size:20px;margin:6px 0">Mulțumim!</h3><p class="lead">Am primit datele tale. Te contactăm în curând.</p></div>
   </div>
   <div class="portrait"><img src="assets/logo.png" alt="CARGUARD®" style="position:absolute;top:16px;left:16px;height:26px;width:auto;filter:drop-shadow(0 2px 5px rgba(0,0,0,.95));z-index:3"><img src="assets/hajni.jpg" alt="CARGUARD® - partenerul tău"><div class="tag"><small>CARGUARD® &middot; Globiz Group</small>Partenerul tău pentru accesorii auto de calitate</div></div>
-</div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
+</div></section>
 
 <section><div class="wrap">
   <h2>Știm <span class="r">cum e&hellip;</span></h2>
@@ -178,14 +179,14 @@ fbq("init","1344314721133063");fbq("track","PageView");
 </div><div class="wrap" style="text-align:center;margin-top:14px"><a class="btn" href="#inscriere">Înregistrează-te pentru acces la prețurile en-gros &rarr;</a></div></section>
 
 <section><div class="wrap">
-  <div class="cta" id="inscriere">
+  <div class="cta">
     <div class="giftwrap">
       <img class="giftimg" src="assets/gift.jpg" alt="Cadou CARGUARD®">
       <div>
         <img src="assets/logo.png" alt="CARGUARD®" style="height:46px;margin:0 auto 14px;display:block"><h2>Devino <span class="r">partenerul</span> nostru</h2>
         <p class="sub" style="margin:8px 0 0">Înregistrează-te gratuit pe platforma noastră B2B și primești acces la prețurile en-gros și la toată gama de produse.</p>
         <div class="gift">&#127873; Cadou surpriză la prima comandă &mdash; indiferent de sumă!</div><br>
-        <form id="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:460px;margin-left:auto;margin-right:auto">
+        <form class="leadform" action="https://formspree.io/f/xnjkzngr" method="POST" style="margin-top:8px;text-align:left;max-width:440px;margin-left:auto;margin-right:auto">
   <div class="frow"><input name="Nume" placeholder="Nume *" required><input name="Firma" placeholder="Firmă *" required></div>
   <div class="frow"><input name="Telefon" type="tel" placeholder="Telefon *" required><input name="Oras" placeholder="Oraș"></div>
   <input name="Email" type="email" placeholder="Email *" required>
@@ -197,7 +198,7 @@ fbq("init","1344314721133063");fbq("track","PageView");
   <button type="submit" class="btn" style="width:100%;border:0;cursor:pointer;font-size:17px">Trimite datele tale &rarr;</button>
   <div class="reassure">&#10003; Gratuit &middot; 2 minute &middot; Te contactăm ca să finalizezi înregistrarea</div>
 </form>
-<div id="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">&#9989;</div><h3 style="font-size:22px;margin:8px 0">Mulțumim!</h3><p class="sub">Am primit datele tale. Te contactăm în curând.</p></div>
+<div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">&#9989;</div><h3 style="font-size:22px;margin:8px 0">Mulțumim!</h3><p class="sub">Am primit datele tale. Te contactăm în curând.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
   <p class="sub" style="font-size:14px;margin:0 0 12px">Știi deja că vrei să devii partener?</p>
   <a href="https://globiz.ro/utilizator/inregistrare?ref=landing_ro" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Înregistrează-te direct pe platformă &rarr;</a>
@@ -209,6 +210,6 @@ fbq("init","1344314721133063");fbq("track","PageView");
 </div></section>
 
 <footer><div class="wrap"><b>CARGUARD®</b> &middot; Globiz Group &middot; carguard.shop &middot; globiz.ro<br>Accesorii auto en-gros (B2B) &mdash; calitate, garanție, direct de la producător.</div></footer>
-<script>(function(){var lf=document.getElementById("leadform");if(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){lf.style.display="none";document.getElementById("leadok").style.display="block";if(window.fbq)fbq("track","Lead");}else{alert("Eroare. Încercați din nou sau sunați-ne.");}}).catch(function(){alert("Eroare de rețea. Încercați din nou.");});});}var reg=document.querySelectorAll('a[href*="globiz.ro/utilizator/inregistrare"]');for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}})();</script>
+<script>(function(){document.querySelectorAll("form.leadform").forEach(function(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";if(window.fbq)fbq("track","Lead");}else{alert("Eroare. Încercați din nou sau sunați-ne.");}}).catch(function(){alert("Eroare de rețea. Încercați din nou.");});});});var reg=document.querySelectorAll("a[href*=\"globiz.ro/utilizator/inregistrare\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}})();</script>
 <div class="sticky-cta"><a class="btn" href="#inscriere">Înregistrează-te &mdash; prețuri en-gros &rarr;</a><small>Gratuit &middot; 2 minute &middot; Acces la prețurile en-gros</small></div></body>
 </html>
