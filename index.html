@@ -215,8 +215,12 @@ fbq("init","1344314721133063");fbq("track","PageView");
   document.querySelectorAll("form.leadform").forEach(function(lf){lf.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(lf);
     fetch(lf.action,{method:"POST",body:d,headers:{"Accept":"application/json"}}).catch(function(){}); // Formspree lead-log, nem blokkolja a sikeres visszajelzest
     var payload={market:"RO",fullName:d.get("Nume")||"",company:d.get("Firma")||"",phone:d.get("Telefon")||"",city:d.get("Oras")||"",email:d.get("Email")||"",vatNumberRaw:d.get("CodTVA")||"",dataConsent:true};
-    fetch(BACKEND_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).catch(function(){}); // megbizhato mentes, formspree-fuggetlen
-    lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";if(window.fbq)fbq("track","Lead");window.open("https://drive.google.com/file/d/1FKjwOnXOT3wNIr5Zk5fZtmQ0YUi6s3t9/preview","_blank");
+    function showSuccess(realLead){
+      lf.style.display="none";var ok=lf.parentNode.querySelector(".leadok");if(ok)ok.style.display="block";
+      if(realLead&&window.fbq)fbq("track","Lead");
+      window.open("https://drive.google.com/file/d/1FKjwOnXOT3wNIr5Zk5fZtmQ0YUi6s3t9/preview","_blank");
+    }
+    fetch(BACKEND_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){return r.json();}).then(function(j){showSuccess(!!j.tripwireUrl);}).catch(function(){showSuccess(false);});
   });});var reg=document.querySelectorAll("a[href*=\"globiz.ro/utilizator/inregistrare\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}
 function cgCheckVatRo(vatInput,companyInput,cityInput,status){var val=vatInput.value.trim();if(!val)return;status.textContent="Se verifică…";status.style.color="#a7a7ad";fetch("https://178-105-10-138.sslip.io/api/vat/validate",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({vatNumber:val,country:"RO"})}).then(function(r){return r.json();}).then(function(j){if(j.status==="valid"){status.textContent="✓ Cod TVA valid";status.style.color="#22C55E";if(companyInput&&!companyInput.value&&j.companyName)companyInput.value=j.companyName;if(cityInput&&!cityInput.value&&j.companyAddress)cityInput.value=j.companyAddress;}else{status.textContent="Nu s-a putut confirma";status.style.color="#ff5959";}}).catch(function(){status.textContent="Eroare de rețea";status.style.color="#ff5959";});}
 document.querySelectorAll('[name="CodTVA"]').forEach(function(vatInput){var form=vatInput.closest("form");var companyInput=form.querySelector('[name="Firma"]');var cityInput=form.querySelector('[name="Oras"]');var status=form.querySelector(".vatstatus");vatInput.addEventListener("blur",function(){cgCheckVatRo(vatInput,companyInput,cityInput,status);});});
