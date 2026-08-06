@@ -94,7 +94,7 @@ fbq("init","1344314721133063");fbq("track","PageView");
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1344314721133063&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
-<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"><a class="btn" href="#inscriere">Prețuri en-gros &rarr;</a></div></header>
+<header><div class="wrap"><img src="assets/logo.png" alt="CARGUARD®"></div></header>
 
 <section class="hero"><div class="wrap">
   <div>
@@ -220,7 +220,7 @@ fbq("init","1344314721133063");fbq("track","PageView");
 <div class="leadok" style="display:none;padding:18px 0"><div style="font-size:42px">&#9989;</div><h3 style="font-size:22px;margin:8px 0">Mulțumim!</h3><p class="sub">Am primit datele tale. Ți-am trimis pe email catalogul cu prețurile noastre — <b>verifică inbox-ul, precum și folderul de spam/junk</b>. Te contactăm în curând.</p></div>
 <div style="margin-top:20px;padding-top:18px;border-top:1px solid var(--line)">
   <p class="sub" style="font-size:14px;margin:0 0 12px">Știi deja că vrei să devii partener?</p>
-  <a href="https://globiz.ro/utilizator/inregistrare?ref=landing_ro" target="_blank" rel="noopener" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Înregistrează-te direct pe platformă &rarr;</a>
+  <a href="#inscriere" style="display:inline-block;background:transparent;color:var(--red2);border:2px solid var(--red);font-weight:800;text-decoration:none;padding:13px 26px;border-radius:12px;font-size:15px">Completează formularul de înregistrare &rarr;</a>
 </div>
 
       </div>
@@ -240,7 +240,7 @@ fbq("init","1344314721133063");fbq("track","PageView");
       window.open("https://drive.google.com/file/d/1FKjwOnXOT3wNIr5Zk5fZtmQ0YUi6s3t9/preview","_blank");
     }
     fetch(BACKEND_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){return r.json();}).then(function(j){showSuccess(!!j.tripwireUrl);}).catch(function(){showSuccess(false);});
-  });});var reg=document.querySelectorAll("a[href*=\"globiz.ro/utilizator/inregistrare\"]");for(var i=0;i<reg.length;i++){reg[i].addEventListener("click",function(){if(window.fbq)fbq("track","Lead");});}
+  });});
 })();</script>
 <div class="sticky-cta"><a class="btn" href="#inscriere">Devino partener &rarr;</a><small>Gratuit &middot; 2 minute &middot; Acces la prețurile en-gros</small></div></body>
 </html>
