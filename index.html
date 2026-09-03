@@ -81,7 +81,8 @@ footer b{color:#fff}
 .sticky-cta a{display:block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:14px;border-radius:10px;font-size:16px;text-align:center}
 .sticky-cta small{display:block;color:var(--mut);font-size:12px;margin-top:6px;text-align:center}
 @media(max-width:760px){.sticky-cta{display:block}body{padding-bottom:88px}}
-.social-float{position:fixed;right:20px;bottom:24px;z-index:150;display:flex;flex-direction:column;gap:12px}
+.social-float{position:fixed;right:20px;bottom:24px;z-index:150;display:flex;flex-direction:column;gap:12px;transition:opacity .2s,transform .2s}
+.social-float.is-hidden{opacity:0;transform:translateX(20px);pointer-events:none}
 .social-float a{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.4);text-decoration:none;transition:transform .15s;color:#fff}
 .social-float a:hover{transform:scale(1.08)}
 .social-float a svg{width:25px;height:25px}
@@ -259,6 +260,15 @@ fbq("init","1344314721133063");fbq("track","PageView");
     }
     fetch(BACKEND_BASE+"/api/tripwire/lead",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)}).then(function(r){return r.json();}).then(function(j){showSuccess(!!j.tripwireUrl);}).catch(function(){showSuccess(false);});
   });});
+var socialFloat=document.querySelector(".social-float");
+if(socialFloat&&"IntersectionObserver" in window){
+  var formsInView=0;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){ if(entry.isIntersecting) formsInView++; else formsInView=Math.max(0,formsInView-1); });
+    socialFloat.classList.toggle("is-hidden", formsInView>0);
+  },{rootMargin:"-10% 0px -10% 0px"});
+  document.querySelectorAll("form.leadform").forEach(function(el){io.observe(el);});
+}
 })();</script>
 <div class="sticky-cta"><a class="btn" href="#inscriere">Devino partener &rarr;</a><small>Gratuit &middot; 2 minute &middot; Acces la prețurile en-gros</small></div></body>
 </html>
