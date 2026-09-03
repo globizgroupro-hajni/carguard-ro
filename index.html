@@ -262,10 +262,10 @@ fbq("init","1344314721133063");fbq("track","PageView");
   });});
 var socialFloat=document.querySelector(".social-float");
 if(socialFloat&&"IntersectionObserver" in window){
-  var formsInView=0;
+  var visibleForms=new Set();
   var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){ if(entry.isIntersecting) formsInView++; else formsInView=Math.max(0,formsInView-1); });
-    socialFloat.classList.toggle("is-hidden", formsInView>0);
+    entries.forEach(function(entry){ if(entry.isIntersecting) visibleForms.add(entry.target); else visibleForms.delete(entry.target); });
+    socialFloat.classList.toggle("is-hidden", visibleForms.size>0);
   },{rootMargin:"-10% 0px -10% 0px"});
   document.querySelectorAll("form.leadform").forEach(function(el){io.observe(el);});
 }
